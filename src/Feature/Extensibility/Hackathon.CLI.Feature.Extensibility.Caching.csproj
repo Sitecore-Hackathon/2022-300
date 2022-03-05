@@ -6,6 +6,13 @@
     <RootNamespace>Hackathon.CLI.Feature.Extensibility.Caching</RootNamespace>
     <ApplicationIcon />
     <Win32Resource />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>2022</Copyright>
+    <Authors>Sitecore Hackathon 300 Team</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Cache\Hackathon.CLI.Feature.Cache.csproj" />
+    <ProjectReference Include="..\Client\Hackathon.Feature.GraphQL.Cache.Client.csproj" />
   </ItemGroup>
 
 </Project>

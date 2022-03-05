@@ -1,7 +1,8 @@
-﻿namespace Hackathon.CLI.Feature.Cache.Services.Interfaces
+﻿
+namespace Hackathon.Feature.GraphQL.Cache.Services.Interfaces
 {
-    public interface ICachingService
-    {
-        void Process();
-    }
+  internal interface ICachingService
+  {
+    void Process();
+  }
 }

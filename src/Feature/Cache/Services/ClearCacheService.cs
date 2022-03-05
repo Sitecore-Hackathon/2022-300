@@ -1,16 +1,13 @@
-﻿using Hackathon.CLI.Feature.Cache.Services.Interfaces;
+﻿using Hackathon.Feature.GraphQL.Cache.Services.Interfaces;
 
-namespace Hackathon.CLI.Feature.Cache.Services
+namespace Hackathon.Feature.GraphQL.Cache.Services
 {
-    class ClearCacheService : ICachingService
-    {
-        private readonly ICacheService _cacheService;
+    internal class ClearCacheService : ICachingService
+  {
+    private readonly ICacheService _cacheService;
 
-        public ClearCacheService(ICacheService cacheService) => this._cacheService = cacheService;
+    public ClearCacheService(ICacheService cacheService) => this._cacheService = cacheService;
 
-        public async void Process()
-        {
-            this._cacheService.ClearAllCaches();
-        }
-    }
+    public void Process() => this._cacheService.ClearCache();
+  }
 }

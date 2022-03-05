@@ -1,9 +1,12 @@
-﻿using Hackathon.CLI.Feature.Cache.Services.Interfaces;
+﻿
+using Hackathon.Feature.GraphQL.Cache.Services.Interfaces;
+using System.Diagnostics.CodeAnalysis;
 
-namespace Hackathon.CLI.Feature.Cache.Services
+namespace Hackathon.Feature.GraphQL.Cache.Services
 {
-    internal class CacheService : ICacheService
-    {
-        public void ClearAllCaches() => Sitecore.Caching.CacheManager.ClearAllCaches();
-    }
+    [ExcludeFromCodeCoverage]
+  internal class CacheService : ICacheService
+  {
+    public void ClearCache() => Sitecore.Caching.CacheManager.ClearAllCaches();
+  }
 }

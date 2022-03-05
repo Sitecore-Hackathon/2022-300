@@ -20,11 +20,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution", "_Solution", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cache", "Cache", "{AFAABCE3-2B3F-4851-95CC-A25CF9EF4B55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.CLI.Feature.Cache", "..\src\Feature\Cache\Hackathon.CLI.Feature.Cache.csproj", "{BEA83958-2C2A-458F-87C5-FA84AA2A9133}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensibility", "Extensibility", "{EC1A4AC3-6D13-4C74-83A5-F308CE0F3786}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hackathon.CLI.Feature.Extensibility.Caching", "..\src\Feature\Extensibility\Hackathon.CLI.Feature.Extensibility.Caching.csproj", "{C13764FD-0B22-4732-951E-5CF0A0998F57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{7F069EBB-090F-4828-BA26-59D1332ED0DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Feature.GraphQL.Cache", "..\src\Feature\Cache\Hackathon.Feature.GraphQL.Cache.csproj", "{C259E1CE-877B-4C92-A5F5-6195A03F386D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hackathon.Feature.GraphQL.Cache.Client", "..\src\Feature\Client\Hackathon.Feature.GraphQL.Cache.Client.csproj", "{CB99BD7E-9862-44BA-9740-1BDB3134E32C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,25 +36,32 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BEA83958-2C2A-458F-87C5-FA84AA2A9133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BEA83958-2C2A-458F-87C5-FA84AA2A9133}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BEA83958-2C2A-458F-87C5-FA84AA2A9133}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BEA83958-2C2A-458F-87C5-FA84AA2A9133}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C13764FD-0B22-4732-951E-5CF0A0998F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C13764FD-0B22-4732-951E-5CF0A0998F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C13764FD-0B22-4732-951E-5CF0A0998F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C13764FD-0B22-4732-951E-5CF0A0998F57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C259E1CE-877B-4C92-A5F5-6195A03F386D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C259E1CE-877B-4C92-A5F5-6195A03F386D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C259E1CE-877B-4C92-A5F5-6195A03F386D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C259E1CE-877B-4C92-A5F5-6195A03F386D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB99BD7E-9862-44BA-9740-1BDB3134E32C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB99BD7E-9862-44BA-9740-1BDB3134E32C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB99BD7E-9862-44BA-9740-1BDB3134E32C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB99BD7E-9862-44BA-9740-1BDB3134E32C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AFAABCE3-2B3F-4851-95CC-A25CF9EF4B55} = {17DD5718-6E13-4F2C-9738-B410396D4552}
-		{BEA83958-2C2A-458F-87C5-FA84AA2A9133} = {AFAABCE3-2B3F-4851-95CC-A25CF9EF4B55}
 		{EC1A4AC3-6D13-4C74-83A5-F308CE0F3786} = {17DD5718-6E13-4F2C-9738-B410396D4552}
 		{C13764FD-0B22-4732-951E-5CF0A0998F57} = {EC1A4AC3-6D13-4C74-83A5-F308CE0F3786}
+		{7F069EBB-090F-4828-BA26-59D1332ED0DD} = {17DD5718-6E13-4F2C-9738-B410396D4552}
+		{C259E1CE-877B-4C92-A5F5-6195A03F386D} = {AFAABCE3-2B3F-4851-95CC-A25CF9EF4B55}
+		{CB99BD7E-9862-44BA-9740-1BDB3134E32C} = {7F069EBB-090F-4828-BA26-59D1332ED0DD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {311DA37D-528B-43B2-A99B-E7253F841D46}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal

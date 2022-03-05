@@ -10,4 +10,7 @@
     <description>Extensions to the Sitecore CLI</description>
     <copyright>2022</copyright>
   </metadata>
+    <files>
+         <file src="plugin\*.*" target="plugin" /> 
+    </files> 
 </package>

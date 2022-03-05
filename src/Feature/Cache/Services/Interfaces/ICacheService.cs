@@ -1,7 +1,7 @@
-﻿namespace Hackathon.CLI.Feature.Cache.Services.Interfaces
+﻿namespace Hackathon.Feature.GraphQL.Cache.Services.Interfaces
 {
     internal interface ICacheService
-    {
-        void ClearAllCaches();
-    }
+  {
+    void ClearCache();
+  }
 }

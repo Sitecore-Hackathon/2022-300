@@ -1,10 +1,11 @@
-﻿using Hackathon.CLI.Feature.Cache.Services.Interfaces;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using Sitecore.DevEx.Client.Logging;
 using Sitecore.DevEx.Client.Tasks;
 using Sitecore.DevEx.Configuration;
 using System;
 using System.Diagnostics;
+using Hackathon.Feature.GraphQL.Cache.Client.Services;
+using Sitecore.DevEx.Configuration.Models;
 
 namespace Hackathon.CLI.Feature.Extensibility.Caching.Tasks
 {
@@ -13,12 +14,12 @@ namespace Hackathon.CLI.Feature.Extensibility.Caching.Tasks
     private readonly IRootConfigurationManager _rootConfigurationManager;
     private readonly ILoggerFactory _loggerFactory;
     private readonly ILogger _logger;
-    private readonly ICachingService _cachingService;
+    private readonly IClearCacheService _cachingService;
 
         public ClearCacheTask(
       IRootConfigurationManager rootConfigurationManager,
       ILoggerFactory loggerFactory,
-      ICachingService cachingService)
+      IClearCacheService cachingService)
     {
       this._rootConfigurationManager = rootConfigurationManager ?? throw new ArgumentNullException(nameof (rootConfigurationManager));
       this._loggerFactory = loggerFactory ?? throw new ArgumentNullException(nameof (loggerFactory));
@@ -31,7 +32,7 @@ namespace Hackathon.CLI.Feature.Extensibility.Caching.Tasks
         ((TaskOptionsBase) options).Validate();
         Stopwatch outerStopwatch = Stopwatch.StartNew();
 
-        this._cachingService.Process();
+        await this._cachingService.ClearCacheAsync(new EnvironmentConfiguration(_loggerFactory));
 
         outerStopwatch.Stop();
         ColorLogExtensions.LogConsoleVerbose(this._logger, string.Empty, new ConsoleColor?(), new ConsoleColor?());

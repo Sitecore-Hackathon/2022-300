@@ -1,10 +1,9 @@
 ﻿using GraphQL.Types;
-using Hackathon.CLI.Feature.Cache.Models;
-using Hackathon.CLI.Feature.Cache.Services.Interfaces;
-using System;
+using Hackathon.Feature.GraphQL.Cache.Models;
+using Hackathon.Feature.GraphQL.Cache.Services.Interfaces;
 using System.Collections.Generic;
 
-namespace Hackathon.CLI.Feature.Cache.Services
+namespace Hackathon.Feature.GraphQL.Cache.Services
 {
     internal class CachingResolver : ICachingResolver
   {
@@ -16,20 +15,14 @@ namespace Hackathon.CLI.Feature.Cache.Services
     }
 
     public IEnumerable<CachingStatus> Resolve(
+      MutationType mutationType,
       ResolveFieldContext context)
     {
-        List<CachingStatus> resultList = new List<CachingStatus>();
-        try
-        {
-            ICachingService service = CachingFactory.GetService(this._cacheService);
-            service.Process();
-            resultList.Add(CachingStatus.Completed());
-        }
-        catch (Exception ex)
-        {
-            resultList.Add(CachingStatus.Failed());
-        }
-        return (IEnumerable<CachingStatus>)resultList;
+      ICachingService service = CachingFactory.GetService(mutationType, this._cacheService);
+      List<CachingStatus> resultList = new List<CachingStatus>();
+      service.Process();
+        resultList.Add(CachingStatus.Completed());
+        return (IEnumerable<CachingStatus>) resultList;
     }
   }
 }

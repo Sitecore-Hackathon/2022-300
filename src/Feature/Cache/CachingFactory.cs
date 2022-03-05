@@ -1,13 +1,16 @@
-﻿using Hackathon.CLI.Feature.Cache.Services;
-using Hackathon.CLI.Feature.Cache.Services.Interfaces;
+﻿using Hackathon.Feature.GraphQL.Cache.Models;
+using Hackathon.Feature.GraphQL.Cache.Services;
+using Hackathon.Feature.GraphQL.Cache.Services.Interfaces;
 
-namespace Hackathon.CLI.Feature.Cache
+namespace Hackathon.Feature.GraphQL.Cache
 {
     internal static class CachingFactory
   {
-    internal static ICachingService GetService(ICacheService cacheService)
+    internal static ICachingService GetService(
+      MutationType mutationType,
+      ICacheService cacheService)
     {
-        return (ICachingService) new ClearCacheService(cacheService);
+      return (ICachingService) new ClearCacheService(cacheService);
     }
   }
 }

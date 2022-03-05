@@ -1,9 +1,8 @@
-﻿namespace Hackathon.CLI.Feature.Cache.Models
+﻿namespace Hackathon.Feature.GraphQL.Cache.Models
 {
   public enum CachingState
   {
-    NotStarted,
-    Failed,
+    NotFound,
     Completed
   }
 }

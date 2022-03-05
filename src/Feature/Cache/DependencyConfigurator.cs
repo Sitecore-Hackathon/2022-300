@@ -1,12 +1,13 @@
-﻿using Hackathon.CLI.Feature.Cache.Services;
-using Hackathon.CLI.Feature.Cache.Services.Interfaces;
+﻿using Hackathon.Feature.GraphQL.Cache.Services;
+using Hackathon.Feature.GraphQL.Cache.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Sitecore.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 
-namespace Hackathon.CLI.Feature.Cache
+namespace Hackathon.Feature.GraphQL.Cache
 {
-
-    public class DependencyConfigurator : IServicesConfigurator
+    [ExcludeFromCodeCoverage]
+  public class DependencyConfigurator : IServicesConfigurator
   {
     public void Configure(IServiceCollection serviceCollection)
     {

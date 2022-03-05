@@ -1,28 +1,28 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 
-namespace Hackathon.CLI.Feature.Cache.Models
+namespace Hackathon.Feature.GraphQL.Cache.Models
 {
-    public class CachingStatus
+    [ExcludeFromCodeCoverage]
+  public class CachingStatus
   {
     public CachingStatus()
     {
-      this.StateCode = CachingState.NotStarted;
+      this.StateCode = CachingState.NotFound;
     }
 
     public CachingState StateCode { get; set; }
-        
+
+
     public string StateName => Enum.GetName(typeof (CachingState), (object) this.StateCode);
 
-    public static CachingStatus NotStarted(string id = "") => new CachingStatus()
+    
+    public static CachingStatus NotFound(string id) => new CachingStatus()
     {
-        StateCode = CachingState.NotStarted
+      StateCode = CachingState.NotFound
     };
 
-    public static CachingStatus Failed(string id = "") => new CachingStatus()
-    {
-      StateCode = CachingState.Failed
-    };
-
+    
     public static CachingStatus Completed()
     {
       return new CachingStatus()
