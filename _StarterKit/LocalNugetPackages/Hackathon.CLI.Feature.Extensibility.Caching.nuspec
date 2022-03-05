@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Hackathon.CLI.Feature.Extensibility.Caching</id>
+    <version>1.0.0</version>
+    <title>Hackathon.CLI.Feature.Extensibility.Caching</title>
+    <authors>Sitecore Hackathon 300 Team</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <description>Extensions to the Sitecore CLI</description>
+    <copyright>2022</copyright>
+  </metadata>
+</package>

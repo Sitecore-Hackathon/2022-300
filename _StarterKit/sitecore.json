@@ -9,10 +9,14 @@
     "Sitecore.DevEx.Extensibility.Serialization@4.1.0",
     "Sitecore.DevEx.Extensibility.Publishing@4.1.0",
     "Sitecore.DevEx.Extensibility.Indexing@4.1.0",
-    "Sitecore.DevEx.Extensibility.ResourcePackage@4.1.0"
+    "Sitecore.DevEx.Extensibility.ResourcePackage@4.1.0",
+    "Hackathon.CLI.Feature.Extensibility.Caching@1.0.0"
   ],
   "serialization": {
     "defaultMaxRelativeItemPathLength": 100,
-    "defaultModuleRelativeSerializationPath": "serialization"
+    "defaultModuleRelativeSerializationPath": "serialization",
+    "removeOrphansForRoles": true,
+    "continueOnItemFailure": false,
+    "excludedFields": []
   }
 }

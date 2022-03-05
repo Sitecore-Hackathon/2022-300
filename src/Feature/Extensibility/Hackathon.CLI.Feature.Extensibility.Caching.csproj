@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Hackathon.CLI.Feature.Extensibility.Caching</AssemblyName>
+    <RootNamespace>Hackathon.CLI.Feature.Extensibility.Caching</RootNamespace>
+    <ApplicationIcon />
+    <Win32Resource />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.14" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.14" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.14" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.14" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.14" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Sitecore.DevEx.Client.Cli" Version="4.1.1" />
+    <PackageReference Include="Sitecore.DevEx.Serialization.Client" Version="4.1.1" />
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta3.22114.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cache\Hackathon.CLI.Feature.Cache.csproj" />
+  </ItemGroup>
+
+</Project>
