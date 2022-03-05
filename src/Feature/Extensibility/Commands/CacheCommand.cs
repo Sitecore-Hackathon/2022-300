@@ -1,25 +1,13 @@
-﻿using Hackathon.CLI.Feature.Extensibility.Caching.Tasks;
-using Sitecore.Devex.Client.Cli.Extensibility.Subcommands;
-using System;
+﻿using Sitecore.Devex.Client.Cli.Extensibility.Subcommands;
 using System.CommandLine;
-using System.Diagnostics.CodeAnalysis;
-using System.Threading.Tasks;
 
 namespace Hackathon.CLI.Feature.Extensibility.Caching.Commands
 {
-    [ExcludeFromCodeCoverage]
-  public class CacheCommand : SubcommandBase<ClearCacheTask, CacheArgs>
+  public class CacheCommand : Command, ISubcommand
   {
-    public CacheCommand(IServiceProvider container)
-      : base("cache", "Sitecore Cache commands", container)
+    public CacheCommand(string name, string description = null)
+      : base(name, description)
     {
-        ((Command) this).AddOption(ArgOptions.Clear);
-    }
-
-    protected override async Task<int> Handle(ClearCacheTask task, CacheArgs args)
-    {
-        task.Execute((ClearCacheTaskOptions)args);
-        return 0;
     }
   }
 }

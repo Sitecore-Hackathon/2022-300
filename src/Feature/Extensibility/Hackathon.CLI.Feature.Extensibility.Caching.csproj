@@ -6,7 +6,7 @@
     <RootNamespace>Hackathon.CLI.Feature.Extensibility.Caching</RootNamespace>
     <ApplicationIcon />
     <Win32Resource />
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Copyright>2022</Copyright>
     <Authors>Sitecore Hackathon 300 Team</Authors>
   </PropertyGroup>
@@ -25,10 +25,6 @@
     <PackageReference Include="Sitecore.DevEx.Client.Cli" Version="4.1.1" />
     <PackageReference Include="Sitecore.DevEx.Serialization.Client" Version="4.1.1" />
     <PackageReference Include="System.CommandLine" Version="2.0.0-beta3.22114.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Client\Hackathon.Feature.GraphQL.Cache.Client.csproj" />
   </ItemGroup>
 
 </Project>
